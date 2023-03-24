@@ -1,0 +1,20 @@
+type Fleet {
+    id: String!
+    name: String!
+}
+
+input FleetInput {
+    id: String!
+    name: String!
+}
+type Query {
+    fleets: [Fleet]
+}
+
+type Mutation {
+    saveFleet(fleet: FleetInput!): Fleet
+}
+
+type Subscription {
+    numberFleets: Int
+}
